@@ -669,7 +669,7 @@ std::vector<UserSessionView> UserSession::tabViewsAsList() const
 		viewsList.push_back(*it);
 	}
 
-	// Сортируем по возрастания индекса таба, чтобы восстановить в правильном порядке
+	// РЎРѕСЂС‚РёСЂСѓРµРј РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ РёРЅРґРµРєСЃР° С‚Р°Р±Р°, С‡С‚РѕР±С‹ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РІ РїСЂР°РІРёР»СЊРЅРѕРј РїРѕСЂСЏРґРєРµ
 	std::sort(viewsList.begin(), viewsList.end(), [](const UserSessionView & v1, const UserSessionView & v2)
 	{
 		return v1.viewIndex < v2.viewIndex;

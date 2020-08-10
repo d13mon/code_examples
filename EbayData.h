@@ -34,7 +34,7 @@ struct EbayCredentials
 using CredentialsStatus = std::pair<EbayCredentials, int>;
 
 /**
-*   struct EbayCategoryTreeNode - узловой элемент дерева каталогов eBay
+*   struct EbayCategoryTreeNode - СѓР·Р»РѕРІРѕР№ СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР° РєР°С‚Р°Р»РѕРіРѕРІ eBay
 */
 struct EbayCategoryTreeNode
 {
@@ -45,7 +45,7 @@ struct EbayCategoryTreeNode
 	int          categoryTreeNodeLevel_;
 
 	/**
-	*  Рекурсивный метод чтения и парсинга данных из JSON
+	*  вЂ“РµРєСѓСЂСЃРёРІРЅС‹Р№ РјРµС‚РѕРґ С‡С‚РµРЅРёВ¤ Рё РїР°СЂСЃРёРЅРіР° РґР°РЅРЅС‹С… РёР· JSON
 	*/
 	void read(const QJsonObject & json);
 

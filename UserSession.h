@@ -11,7 +11,7 @@ typedef std::weak_ptr <UserSessionObserver> UserSessionObserverWeakPtr;
 
 /**
  * @class UserSessionInfo
- * @brief Информация о пользователе
+ * @brief РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ
  */
 struct UserSessionInfo
 {
@@ -29,7 +29,7 @@ struct UserSessionInfo
 
 /**
  * @class UserSessionCommonRights
- * @brief Групповые(общие) права пользователя
+ * @brief Р“СЂСѓРїРїРѕРІС‹Рµ(РѕР±С‰РёРµ) РїСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionCommonRights
 {
@@ -49,7 +49,7 @@ struct UserSessionCommonRights
 
 /**
  * @class UserSessionChannelInfo
- * @brief Информация о канале в сессии пользователя
+ * @brief РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєР°РЅР°Р»Рµ РІ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionChannelInfo
 {	
@@ -69,7 +69,7 @@ typedef QMap<QString, UserSessionChannelInfo> UserSessionChannelsMap;
 
 /**
  * @class UserSessionDeviceInfo
- * @brief  Информация о девайсе в сессии пользователя
+ * @brief  РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РґРµРІР°Р№СЃРµ РІ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionDeviceInfo
 {	
@@ -94,7 +94,7 @@ typedef QList<UserSessionDeviceInfo> UserSessionDevicesList;
 
 /**
  * @class UserSessionRights
- * @brief Права пользователя
+ * @brief РџСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionRights
 {
@@ -106,7 +106,7 @@ struct UserSessionRights
 
 /**
  * @class UserSessionSetting
- * @brief Опция настройки пользователя
+ * @brief РћРїС†РёСЏ РЅР°СЃС‚СЂРѕР№РєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionSetting
 {
@@ -123,7 +123,7 @@ typedef QPair<QPoint, QSize> UserSessionLayoutCellInfo;
 
 /**
  * @class UserSessionLayoutCell
- * @brief Ячейка разбивки пользователя
+ * @brief РЇС‡РµР№РєР° СЂР°Р·Р±РёРІРєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionLayoutCell
 {
@@ -144,7 +144,7 @@ typedef QList<UserSessionLayoutCellInfo> UserSessionLayoutCellInfoList;
 
 /**
  * @class UserSessionLayout
- * @brief Разбивка пользователя
+ * @brief Р Р°Р·Р±РёРІРєР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionLayout
 {
@@ -164,7 +164,7 @@ typedef QList<UserSessionLayout> UserSessionLayoutsList;
 
 /**
  * @class UserSessionViewCamera
- * @brief Информация о камере на табе
+ * @brief РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєР°РјРµСЂРµ РЅР° С‚Р°Р±Рµ
  */
 struct UserSessionViewCamera
 {
@@ -182,7 +182,7 @@ typedef QList<UserSessionViewCamera> UserSessionViewCamerasList;
 
 /**
  * @class UserSessionView
- * @brief Таб пользователя
+ * @brief РўР°Р± РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 struct UserSessionView
 {
@@ -206,7 +206,7 @@ typedef QMap<QUuid, UserSessionView> UserSessionViewsMap;
 
 /**
  * @class UserSession
- * @brief Сессия пользователя
+ * @brief РЎРµСЃСЃРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 class UserSession : public QObject
 {
@@ -247,12 +247,12 @@ public: //LOGIN
 	bool isAdminLogged() const;
 	
 	/**
-	*  @brief То же, что и !IsLogged
+	*  @brief РўРѕ Р¶Рµ, С‡С‚Рѕ Рё !IsLogged
 	*/
 	bool isEmpty() const;
 
 	/**
-	*  @brief Сессия валидная?
+	*  @brief РЎРµСЃСЃРёСЏ РІР°Р»РёРґРЅР°СЏ?
 	*/
 	bool isValid() const;
 	void setValid(bool valid);
@@ -272,62 +272,62 @@ public slots:
 public: //USERS
 
 	/**
-	*  @brief Имя залогиненного юзера
+	*  @brief РРјСЏ Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРіРѕ СЋР·РµСЂР°
 	*/
 	QString username() const;
 
 	/**
-	*  @brief Информация о залогиненном пользователе	
+	*  @brief РРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРј РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ	
 	*/
 	UserSessionInfo userInfo() const;
 
 	/**
-	*  @brief Права залогиненного пользователя	
+	*  @brief РџСЂР°РІР° Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ	
 	*/
 	UserSessionRights rights() const;
 
 	/**
-	*  @brief Список девайсов (dvr) залогиненного пользователя		
+	*  @brief РЎРїРёСЃРѕРє РґРµРІР°Р№СЃРѕРІ (dvr) Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ		
 	*/
 	UserSessionDevicesList devices() const;
 	
 	/**
-	*  @brief Список сеттингов залогиненного пользователя		
+	*  @brief РЎРїРёСЃРѕРє СЃРµС‚С‚РёРЅРіРѕРІ Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ		
 	*/
 	UserSessionSettingsMap settings() const;
 
 	/**
-	*  @brief Список разбивок залогиненного пользователя		
+	*  @brief РЎРїРёСЃРѕРє СЂР°Р·Р±РёРІРѕРє Р·Р°Р»РѕРіРёРЅРµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ		
 	*/
 	UserSessionLayoutsList layouts() const;
 
 	/**
-	*  @brief Получение значения конкретной настройки	
+	*  @brief РџРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РєРѕРЅРєСЂРµС‚РЅРѕР№ РЅР°СЃС‚СЂРѕР№РєРё	
 	*/
 	QVariant setting(const QString & name) const;
 
 	/**
-	*  @brief Список вьюсов (закладок)		
+	*  @brief РЎРїРёСЃРѕРє РІСЊСЋСЃРѕРІ (Р·Р°РєР»Р°РґРѕРє)		
 	*/
 	UserSessionViewsMap bookmarkViews() const;
 
 	/**
-	*  @brief Список вьюсов (табов)		
+	*  @brief РЎРїРёСЃРѕРє РІСЊСЋСЃРѕРІ (С‚Р°Р±РѕРІ)		
 	*/
 	UserSessionViewsMap tabViews() const;
 
 	/**
-	*  @brief Для удобства в виде простого списка
+	*  @brief Р”Р»СЏ СѓРґРѕР±СЃС‚РІР° РІ РІРёРґРµ РїСЂРѕСЃС‚РѕРіРѕ СЃРїРёСЃРєР°
 	*/
 	std::vector<UserSessionView> UserSession::tabViewsAsList() const;
 
 	/**
-	*  @brief Id юзера в БД
+	*  @brief Id СЋР·РµСЂР° РІ Р‘Р”
 	*/
 	int userId() const;
 
 	/**
-	*  @brief Дефолтные сеттинги на этом клиенте
+	*  @brief Р”РµС„РѕР»С‚РЅС‹Рµ СЃРµС‚С‚РёРЅРіРё РЅР° СЌС‚РѕРј РєР»РёРµРЅС‚Рµ
 	*/
 	static QMap<QString, QVariant> defaultSettings();
 
@@ -338,16 +338,16 @@ private: //USER
 public: //DEVICES
 
 	/**
-	*  @brief Канальные права пользователя на конкретный канал
+	*  @brief РљР°РЅР°Р»СЊРЅС‹Рµ РїСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅР° РєРѕРЅРєСЂРµС‚РЅС‹Р№ РєР°РЅР°Р»
 	*/
 	bool channelRights(const QString & endpoint, const QString& uuid, UserSessionChannelInfo & rights) const;
 	bool channelRights(const std::string & endpoint, const Uuid & uuid, UserSessionChannelInfo & rights) const;
 	bool channelRights(const ChannelInfo & channel, UserSessionChannelInfo & rights) const;
 
 	/**
-	*  @brief Есть ли у пользователя доступ к девайсу
+	*  @brief Р•СЃС‚СЊ Р»Рё Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґРѕСЃС‚СѓРї Рє РґРµРІР°Р№СЃСѓ
 	*
-	*  Если все каналы девайса не имеют права Live, то доступа нет
+	*  Р•СЃР»Рё РІСЃРµ РєР°РЅР°Р»С‹ РґРµРІР°Р№СЃР° РЅРµ РёРјРµСЋС‚ РїСЂР°РІР° Live, С‚Рѕ РґРѕСЃС‚СѓРїР° РЅРµС‚
 	*/
 	bool isDeviceHasNoAccess(const std::string& endpoint) const;
 
@@ -409,7 +409,7 @@ typedef std::weak_ptr <UserSession> UserSessionWeakPtr;
 
 /**
  * @class UserSessionObserver
- * @brief Интерфейс наблюдателя сессии пользователя
+ * @brief РРЅС‚РµСЂС„РµР№СЃ РЅР°Р±Р»СЋРґР°С‚РµР»СЏ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 class UserSessionObserver 
 {
